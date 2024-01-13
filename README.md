@@ -1,66 +1,62 @@
+Data Slicing Algorithm
 
-# ChatGPT Slicing Algorithm and Text Generator
+This Python program is designed to process a user-provided text file, perform text preprocessing, generate slices based on file size, and identify disjoint slices using cosine similarity. If the file size exceeds a specified threshold, the program creates and saves disjoint slices into separate text files.
 
-Welcome to the ChatGPT Slicing Algorithm and Text Generator repository! This project offers two powerful tools to enhance your text processing capabilities.
-
-## ChatGPT Slicing Algorithm
-
-### Overview
-
-The ChatGPT Slicing Algorithm is an advanced utility designed to optimize the interaction with the ChatGPT 3.5 model. With the ability to handle inputs exceeding a standard size of 128 MB, this algorithm intelligently slices large inputs into manageable chunks that fit within the context window. Key features include:
-
-- **Overlap:** Two slices can overlap, ensuring a smooth transition between consecutive slices.
-- **Inclusion:** No slice is included in another, preserving the integrity of each segment.
-- **Distinctiveness:** Adjacent slices must be different enough, as determined by cosine distance.
-
-### Getting Started
-
-#### Requirements
-
-- Python 3
-- NLTK library
-- scikit-learn library
-
-Install the necessary libraries using the following command:
-
-```bash
-pip install nltk scikit-learn
-
-Usage:-
-Clone the repository:
-
-git clone https://github.com/yourusername/ChatGPT-Slicing-Algorithm.git
-cd ChatGPT-Slicing-Algorithm
-
-Run the program:
-
-python3 final.py
-Input the path to your text file when prompted.
-
-Program Components
-final.py: The main Python script containing the slicing algorithm.
-sample_text.txt: An example input text file for testing.
-
-
-Text Generator
-Overview
-The Text Generator is a versatile Bash script designed to facilitate the creation of large text files with customizable content. Whether you need to generate a sample_text.txt file or create custom text for various applications, this script provides an efficient solution.
-
-Usage:
-Make the script executable:
-
-chmod +x create2.sh
-chmod +x create3.sh
-
-Before Run the script create a empty txt file and add the path or file name in BASH script.
-
-Run the script:
-
-./create2.sh(For create file in MB)
-./create3.sh(For Create file in KB)
-Script Details
-Bash script to generate a large text file with customizable content.
+Table of Contents
+Prerequisites
+Introduction
+Usage
 Customization
-Adjust the script variables (output_file and desired_size) to tailor the generated text to your needs. The script fetches text data until the specified file size is reached.
+File Structure
+License
+Prerequisites
+Before running the program, make sure you have the following dependencies installed:
+
+Python 3
+NLTK (Natural Language Toolkit)
+scikit-learn
+You can install the required packages by running:
+
+bash
+Copy code
+pip install nltk scikit-learn
+Additionally, download the NLTK stopwords dataset:
+
+bash
+Copy code
+python -m nltk.downloader stopwords
+Introduction
+This program addresses the need to process large text documents efficiently by providing the following functionalities:
+
+Text Preprocessing: The input text undergoes preprocessing, which includes tokenization, stemming using Porter's algorithm, and removal of English stopwords.
+
+File Size Based Slicing: If the file size exceeds a specified threshold (max_size), the program divides the text into fixed-size slices. Otherwise, it processes the entire content as is.
+
+Cosine Similarity for Disjoint Slices Detection: The program uses the cosine similarity metric to identify disjoint slices among the generated slices. Slices with a cosine similarity below a specified threshold (threshold) are considered disjoint.
+
+User Interaction: The program prompts the user to enter the path to their text file and provides feedback based on the file size.
+
+Usage
+Clone the repository or download the script.
+
+Open a terminal or command prompt and navigate to the directory containing the script.
+
+Run the script by executing the following command:
+python script_name.py
+Enter the path to your text file when prompted.
+
+The program will display disjoint slices if the file size exceeds the standard size.
+
+Customization
+You can customize the program by adjusting the following parameters:
+max_size: Set the standard size threshold for file slicing.
+threshold: Set the cosine similarity threshold for identifying disjoint slices.
+File Structure
+script_name.py: The main Python script.
+README.md: Documentation providing an overview of the project, prerequisites, usage instructions, customization options.
+
+
+
+
 
 
