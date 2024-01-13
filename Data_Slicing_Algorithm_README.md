@@ -36,7 +36,7 @@ To use this program:
 2. Navigate to the script's directory in your terminal or command prompt.
 3. Run the script with the following command:
    ```bash
-   python script_name.py
+   python Main.py
    ```
 4. You will be prompted to enter the path to your text file. The algorithm will then process the file and output results based on the file size.
 
@@ -47,6 +47,6 @@ The algorithm is flexible and allows for customization of key parameters:
 
 ## File Structure
 The project consists of the following files:
-- `script_name.py`: This is the main Python script containing all the logic for the algorithm.
+- `Main.py`: This is the main Python script containing all the logic for the algorithm.
 - `README.md`: Provides a comprehensive overview of the project, including setup instructions, usage, and customization guidelines.
 
