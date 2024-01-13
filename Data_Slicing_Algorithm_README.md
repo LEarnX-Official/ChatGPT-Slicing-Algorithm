@@ -7,7 +7,6 @@
 3. [Usage](#usage)
 4. [Customization](#customization)
 5. [File Structure](#file-structure)
-6. [License](#license)
 
 ## Prerequisites
 Before you begin using the Data Slicing Algorithm, it is crucial to have a suitable environment. This program requires:
@@ -51,5 +50,3 @@ The project consists of the following files:
 - `script_name.py`: This is the main Python script containing all the logic for the algorithm.
 - `README.md`: Provides a comprehensive overview of the project, including setup instructions, usage, and customization guidelines.
 
-## License
-This project is released under [specify license], which allows [brief explanation of license permissions, conditions, and limitations].
